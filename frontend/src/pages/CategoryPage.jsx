@@ -7,6 +7,7 @@ import ProductDetailsModal from "../components/ProductDetailsModal";
 
 const CategoryPage = () => {
 	const { fetchProductsByCategory, products } = useProductStore();
+	console.log(products);
 	const { category } = useParams();
 
 	const [sortBy, setSortBy] = useState("default");
@@ -52,7 +53,7 @@ const CategoryPage = () => {
 				{/* Filter Section */}
 				<div className="flex justify-end mb-6">
 					<select
-						className="border border-gray-300 text-gray-700 text-sm rounded-lg px-4 py-2 focus:ring-emerald-400 focus:border-emerald-400"
+						className="border border-gray-300 text-gray-700 text-sm rounded-lg px-4 py-2 focus:outline-0 focus:border-emerald-400"
 						value={sortBy}
 						onChange={(e) => setSortBy(e.target.value)}
 					>

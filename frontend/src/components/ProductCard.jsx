@@ -34,7 +34,7 @@ const ProductCard = ({ product,onClick }) => {
       
       {/* Add to Cart Button */}
       <button
-        className="absolute bottom-3 z-50 cursor-pointer right-3 bg-white text-black p-2 rounded-full shadow-md opacity-90 hover:opacity-100 transition"
+        className="absolute bottom-3  cursor-pointer right-3 bg-white text-black p-2 rounded-full shadow-md opacity-90 hover:opacity-100 transition"
         onClick={(e) => {
           e.stopPropagation(); // ✅ Stops the click from triggering the parent div
           handleAddToCart();

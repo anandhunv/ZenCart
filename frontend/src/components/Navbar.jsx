@@ -1,5 +1,5 @@
 import { ShoppingCart, LogIn, LogOut, X, Menu } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useUserStore } from "../stores/useUserStore";
 import AuthModal from "./AuthModal";
@@ -14,8 +14,26 @@ const Navbar = () => {
     const [confirmLogoutOpen, setConfirmLogoutOpen] = useState(false); // Logout Confirmation State
     const { user, logout } = useUserStore();
     const { cart } = useCartStore();
+    const profileRef = useRef(null); // Reference for profile menu
+
 
     const navigate = useNavigate();
+
+
+    // Close profile menu when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (profileRef.current && !profileRef.current.contains(event.target)) {
+                setProfileOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
 
     const handleScroll = (id) => {
         const section = document.getElementById(id);
@@ -83,7 +101,7 @@ const Navbar = () => {
                     </button>
                     <div className="hidden md:flex">
                         {user ? (
-                            <div className="relative">
+                            <div className="relative " ref={profileRef}>
                                 <button
                                     className="w-10 h-10 flex items-center justify-center cursor-pointer rounded-full bg-gray-800 text-white font-semibold"
                                     onClick={() => setProfileOpen(!profileOpen)}
