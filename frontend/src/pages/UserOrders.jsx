@@ -1,5 +1,6 @@
     import { useEffect, useState } from "react";
     import axios from "axios";
+import axiosInstance from "../lib/axios";
 
     const UserOrders = () => {
         const [orders, setOrders] = useState([]);
@@ -7,7 +8,7 @@
         useEffect(() => {
             const fetchOrders = async () => {
                 try {
-                    const response = await axios.get("http://localhost:5001/api/orders/my-orders", {
+                    const response = await axiosInstance.get("/orders/my-orders", {
                         withCredentials: true, // Ensures authentication cookies are sent
                     });
                     console.log(response.data);

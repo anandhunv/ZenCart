@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { CheckCircle, Clock, Truck, User } from "lucide-react";
+import axiosInstance from "../lib/axios";
 
 const AdminOrders = () => {
     const [orders, setOrders] = useState([]);
@@ -8,7 +9,7 @@ const AdminOrders = () => {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                const response = await axios.get("http://localhost:5001/api/orders/admin/orders", {
+                const response = await axiosInstance.get("/orders/admin/orders", {
                     withCredentials: true,
                 });
                 setOrders(response.data);
@@ -23,8 +24,7 @@ const AdminOrders = () => {
     // ✅ Update Order Status (Out for Delivery & Delivered)
     const handleUpdateOrderStatus = async (orderId, status) => {
         try {
-            const response = await axios.put(
-                `http://localhost:5001/api/orders/admin/orders/${orderId}/update`,
+            const response = await axiosInstance.put(`/orders/admin/orders/${orderId}/update`,
                 { status },
                 { withCredentials: true }
             );
