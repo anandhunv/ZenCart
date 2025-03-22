@@ -14,6 +14,7 @@ import PurchaseCancelPage from "./pages/PurchaseCancelPage";
 import PurchaseSuccessPage from "./pages/PurchaseSuccessPage";
 import UserOrders from "./pages/UserOrders";
 import AdminOrders from "./pages/AdminOrders";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   const { user, checkAuth, checkingAuth } = useUserStore();
@@ -63,7 +64,8 @@ function App() {
 
 
 
-         
+          {/* 🔥 Catch-all route for unknown URLs */}
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </div>
       <Toaster/>
