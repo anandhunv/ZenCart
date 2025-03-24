@@ -44,21 +44,21 @@ ZenCart is a full-featured eCommerce website built using the MERN stack with enh
 
 ## Screenshots
 ### Frontend Look
-![Home](screenshots/home.png)
-![Featured](screenshots/featured.png)
-![Explore Category](screenshots/explore_category.png)
+![Home](frontend/public/screenshots/home.png)
+![Featured](frontend/public/screenshots/featured.png)
+![Explore Category](frontend/public/screenshots/explore_category.png)
 
 ### Item Details & Pages
-![Item Details](screenshots/item_deatils.png)
-![Items Page](screenshots/items_page.png)
-![Cart](screenshots/cart.png)
+![Item Details](frontend/public/screenshots/item_deatils.png)
+![Items Page](frontend/public/screenshots/items_page.png)
+![Cart](frontend/public/screenshots/cart.png)
 
 ### Admin Dashboard
-![Admin Analytics](screenshots/admin_analytics.png)
-![Admin Orders Details](screenshots/admin_orders_deatils.png)
-![Create Product](screenshots/create_product.png)
-![Orders Info](screenshots/oders_info.png)
-![Product Details Admin](screenshots/product_deatils_admin.png)
+![Admin Analytics](frontend/public/screenshots/admin_analytics.png)
+![Admin Orders Details](frontend/public/screenshots/admin_orders_deatils.png)
+![Create Product](frontend/public/screenshots/create_product.png)
+![Orders Info](frontend/public/screenshots/oders_info.png)
+![Product Details Admin](frontend/public/screenshots/product_deatils_admin.png)
 
 ## Installation & Setup
 ```sh
