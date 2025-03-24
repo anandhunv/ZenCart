@@ -43,6 +43,9 @@ ZenCart is a full-featured eCommerce website built using the MERN stack with enh
 - ✅ **Order Tracking**: Users can check their delivery status in real-time.
 
 ## Screenshots
+### Logo
+![Logo](frontend/public/fav.png)
+
 ### Frontend Look
 ![Home](frontend/public/screenshots/home.png)
 ![Featured](frontend/public/screenshots/featured.png)
