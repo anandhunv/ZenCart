@@ -65,8 +65,8 @@ import axiosInstance from "../lib/axios";
                                     {order.products.map((product, index) => (
                                         <img
                                             key={index}
-                                            src={product.product.image || "https://via.placeholder.com/150"}
-                                            alt={product.product.name || "Product Image"}
+                                            src={product?.product?.image || "https://via.placeholder.com/150"}
+                                            alt={product?.product?.name || "Product Image"}
                                             className="w-20 h-20 object-cover rounded-lg border"
                                         />
                                     ))}
@@ -125,7 +125,7 @@ import axiosInstance from "../lib/axios";
                                                 key={index}
                                                 className="flex items-center justify-between p-2 border border-gray-300 rounded-md"
                                             >
-                                                <p className="font-medium text-gray-800">{product.product.name}</p>
+                                                <p className="font-medium text-gray-800">{product?.product?.name}</p>
                                                 <p className="text-blue-600">{product.quantity} x ${product.price}</p>
                                             </li>
                                         ))}
