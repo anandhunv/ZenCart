@@ -44,22 +44,21 @@ ZenCart is a full-featured eCommerce website built using the MERN stack with enh
 
 ## Screenshots
 ### Frontend Look
-![Frontend UI](path_to_frontend_image)
+![Home](public/screenshots/home.png)
+![Featured](public/screenshots/featured.png)
+![Explore Category](public/screenshots/explore_category.png)
+
+### Item Details & Pages
+![Item Details](public/screenshots/item_deatils.png)
+![Items Page](public/screenshots/items_page.png)
+![Cart](public/screenshots/cart.png)
 
 ### Admin Dashboard
-![Admin Dashboard](path_to_admin_dashboard_image)
-
-### Categories Section
-![Categories](path_to_categories_image)
-
-### Add Items Page
-![Add Items](path_to_add_items_image)
-
-### Product Items List
-![Product Items](path_to_product_items_image)
-
-### Delivery & Order Details
-![Order Details](path_to_order_details_image)
+![Admin Analytics](public/screenshots/admin_analytics.png)
+![Admin Orders Details](public/screenshots/admin_orders_deatils.png)
+![Create Product](public/screenshots/create_product.png)
+![Orders Info](public/screenshots/oders_info.png)
+![Product Details Admin](public/screenshots/product_deatils_admin.png)
 
 ## Installation & Setup
 ```sh
